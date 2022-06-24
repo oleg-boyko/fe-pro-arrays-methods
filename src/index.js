@@ -46,7 +46,9 @@ const osFilter = (os) => {};
  * @param {number} from
  * @param {number} to
  */
-const rangeFilter = (from, to) => {};
+const rangeFilter = (from, to) => {
+      return goods.filter((good) => (good.price >= from && good.price <= to));
+      }; 
 
 const minPriceReducer = () => {};
 
