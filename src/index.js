@@ -65,12 +65,25 @@ return goods.filter((goodModel) => goodModel.model === model);
       return goods.filter((good) => (good.price >= from && good.price <= to));
       }; 
 
-const minPriceReducer = () => {};
+const minPriceReducer = () => {
+    goods.reduce((acc, cur) => {
+    return Math.min(acc, cur.price);
+  }, 0);
+};
 
-const maxPriceReducer = () => {};
+const maxPriceReducer = () => {
+    goods.reduce((acc, cur) => {
+    return Math.max(acc, cur.price);
+  }, 0);
+};
 
-const toMaxSorter = () => {};
-const toMinSorter = () => {};
+const toMaxSorter = () => {
+  return goods.sort((a, b) => b.price - a.price);
+};
+
+const toMinSorter = () => {
+  return goods.sort((a, b) => a.price - b.price);
+};
 
 export const filters = {
   brandFilter,
