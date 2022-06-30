@@ -66,18 +66,18 @@ return goods.filter((goodModel) => goodModel.model === model);
       }; 
 
     const minPriceReducer = () => {
-    const a = goods.reduce((acc, cur) => {
+    const minPrice = goods.reduce((acc, cur) => {
     return Math.min(acc, cur.price);
     }, 0);
-     return a;  
+    return minPrice;  
     };
 
     const maxPriceReducer = () => {
-    const b = goods.reduce((acc, cur) => {
+    const maxPrice = goods.reduce((acc, cur) => {
     return Math.max(acc, cur.price);
-  }, 0);
-       return b;
-  };
+     }, 0);
+     return maxPrice;
+     };
 
 const toMaxSorter = () => {
   return goods.sort((a, b) => b.price - a.price);
