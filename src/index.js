@@ -65,12 +65,25 @@ return goods.filter((goodModel) => goodModel.model === model);
       return goods.filter((good) => (good.price >= from && good.price <= to));
       }; 
 
-    const minPriceReducer = () => {
-    const minPrice = goods.reduce((acc, cur) => {
-     return Math.min(acc, cur.price);
-    }, 0);
-     return minPrice;  
+
+
+
+let arrOfNumbers = [1, -4653, -3, 4, 5, 54, 684, 7, 8, 9, 10,];
+
+    minNumber = (a, b) => {
+        return a < b ? a : b
     };
+console.log(arrOfNumbers.reduce(minNumber))
+
+
+
+    const minPriceReducer = () => {
+    minPrice = (a, b) => {
+    return a.price < b.price ? a.price : b.price
+    };
+    return  goods.reduce(minPrice);  
+    };
+
 
     const maxPriceReducer = () => {
     const maxPrice = goods.reduce((acc, cur) => {
