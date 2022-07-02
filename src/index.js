@@ -66,17 +66,6 @@ return goods.filter((goodModel) => goodModel.model === model);
       }; 
 
 
-
-
-let arrOfNumbers = [1, -4653, -3, 4, 5, 54, 684, 7, 8, 9, 10,];
-
-    minNumber = (a, b) => {
-        return a < b ? a : b
-    };
-console.log(arrOfNumbers.reduce(minNumber))
-
-
-
     const minPriceReducer = () => {
     minPrice = (a, b) => {
     return a.price < b.price ? a.price : b.price
