@@ -68,7 +68,7 @@ return goods.filter((goodModel) => goodModel.model === model);
 
     const minPriceReducer = () => {
     const minPrice = (a, b) => {
-    return a < b ? b : a
+    return a < b ? a : b
     };
     return goods.reduce(minPrice).price;  
     };
